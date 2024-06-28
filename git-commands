@@ -1,0 +1,77 @@
+Git Commands
+
+	•	git —version
+	•	git config —global user.name “xxx"
+	•	git config —global user.name
+	•	git config —global user.email “xxxx"
+	•	git config —global user.email
+	•	git config —global —list
+	•	git config —global -l
+	•	git init : initialize project at project location
+	•	git status : get the status of branch and files
+	•	git add . : add all untracked files
+	•	git add ReadMe.txt : add specific files
+	•	git commit -m “my first commit” : commit with message
+	•	git push -u “project url” master : push commits in url and branch specified
+	•	git clone “ssh url”
+	•	git branch {branch name} : create a new branch but not set to it
+	•	git checkout {branch name} : change to mentioned branch
+	•	git remote : list the remote repositories
+	•	git pull : fetch latest changes
+	•	git branch : get name of branch
+	•	git checkout -b {sub-branch} : create and switch to new branch
+	•	git fetch —all : fetch all remote branchs locally
+	•	git log : get logs
+	•	git revert {commit from log} : revert commit
+	•	git revert —continue : after resolving merge conflict
+	•	git cherry-pick {commit} : adds the commit to local branch
+	•	git rm —cached -r directory_to_remove: remove folder from git but not from local
+
+Fork
+A fork is a copy of the project.
+Forking a pro/repo allows you to make changes without affecting the original project
+
+		Create a new group.
+		Go to project and click on fork and select the namespace.
+		Create a merge request and select source and target branches, etc
+
+SSH-Secure Shell
+		used for authentication
+		By setting ssh key you can connect to GitLab server without using username and password each time.
+
+	•	ssh-keygen : run command on terminal
+	•	copy contents of id_rsa.pub and add key
+
+Gitlab Runner
+		used in Gitlab CI
+		open-source continuous integration service included with GitLab
+		used to run jobs and send results back to GitLab
+
+	•	brew install gitlab-runner
+	•	gitlab-runner —version
+	•	gitlab-runner register : https://docs.gitlab.com/runner/register/index.html
+	•	brew services start gitlab-runner
+	•	brew services stop gitlab-runner
+
+Steps
+	•	git —version
+	•	git init
+	•	git config —global user.name/email
+	•	Create a new file ( eg: touch readme.txt)
+	•	git status
+	•	git add
+	•	git commit
+	•	git push
+
+Rebase
+
+	•	checkout to master
+	•	Pull latest code
+	•	go to your branch
+	•	git rebase master
+	•	git status
+	•	git rebase —continue / git rebase —skip
+	•	now continue with your new changes(add, commit, push)
+	•	git push —force
+
+

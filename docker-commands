@@ -1,0 +1,34 @@
+Docker Commands
+
+FROM openjdk:8
+ADD target/{name of your jar}.jar {name of new jar}.jar
+EXPOSE 8080
+ENTRYPOINT [“java”, “-jar”, “{name of jar}.jar”]
+
+docker run is used to create a fresh container with all the information like name, port, ec.
+but docker start is used to start a stopped container using its container ID or names
+
+	•	docker -v                                                                   — get the version of docker
+	•	docker build -f Dockerfile -t {name}                     — build the docker image f:file; t:tag
+	•	docker images                                                          — get all docker images
+	•	docker pull mongo                                                   — pulls the image but does not run it
+	•	docker run -p 8080:8080 {name}                        — pulls the image and runs the docker image port1:host port; port2:container port
+	•	docker ps                                                                  — list of running containers
+	•	docker ps -a                                                             — list of running and stopped containers
+	•	docker stop {container ID}                                     — stop a running docker container using container ID
+	•	docker start {container ID}                                    — start docker container
+	•	docker logs {container ID}/{names}                     — to get the logs of the container
+	•	docker run -d                                                          — run container in detached mode
+	•	docker run —name {enter name}                         -- run container and set the name as specified
+	•	docker exec -it {container ID}/{names} /bin/bash             — interactive terminal; check any directory and stuff
+	•	docker network ls                                                   — list of docker networks
+	•	docker network create {name}                              — create a docker network with mentioned name
+	•	docker inspect {container ID}                               — get info about container like IP
+
+Push and pull Image
+
+	1	docker build -t {image}
+	2	docker login
+	3	docker tag {image name} mayankjindal97/{name}
+	4	docker push mayankjindal97/{name}
+	5	docker pull mayankjindal97/{name}

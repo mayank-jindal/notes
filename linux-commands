@@ -1,0 +1,45 @@
+Linux Commands
+
+	•	pwd : tell the current directory
+	•	history : list of all the commands run in the terminal
+	•	clear : clear the terminal
+	•	ipconfig getifaddr en0 : get ip
+	•	echo : used to print something in terminal
+	•	sudo : run command with super user privileges
+	•	cd : change directory (cd /users/mayankjindal)
+	•	cd ~ : go home
+	•	cd .. : move up a directory
+	•	ls : list all the contents of current working directory
+	•	ls -l : lists everything in long format like with extra info
+	•	ls -a : shows all files including hidden files
+	•	ls -LS > text.txt : arrow sign will copy the result in the txt file
+	•	cat *.txt: displays contents of txt file
+	•	cat -b *.txt : adds numbers to the lines but not to blank lines
+	•	cat -n *.txt : adds numbers even to blank lines
+	•	cat -s *.txt: squeeze all lines into 1 line
+	•	less : same as cat but opens in new window so helps in looking clean
+	•	grep {word} *.txt : used to search something in a file
+	•	grep -i {word} *.txt : returns result for case insensitive
+	•	sort *.txt : sorts the file in alphabetically order
+	•	sort -r *.txt : sort in reverse order
+	•	sort -n *.txt : sort in numerical order
+	•	cp {file name} /user/mayankjindal : copies the file(present in curr dir) to the given directory
+	•	cp -v {file} {dir} : copies and also shows status
+	•	mv {file name} /user/mayankjindal : moves the file(present in curr dir) to the given directory
+	•	rm {file name} : removes the file
+	•	mkdir {folder name}: make directory
+	•	touch {file name} : create a new file in current dir
+	•	rmdir {folder name} : remove directory
+	•	chmod +x/r/w {file name} : make it executable/readable/writable
+	•	chmod {3 numbers} {file name} : 3 numbers are permissions for user group others
+0 = 0 = nothing
+1 = 1 = x
+2 = 2 = w
+3 = 2+1 = w+x
+4 = 4 = r
+5 = 4+1 = r+x
+6 = 4+2 = r+w
+7 = 4+2+1 = r+w+x
+find
+ps
+Reverse search in terminal using CTRL + R

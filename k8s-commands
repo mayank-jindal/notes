@@ -1,0 +1,50 @@
+Kubernetes commands
+
+	•	brew install minikube
+	•	minikube start —driver=docker/virtualbox
+	•	minikube status/dashboard
+
+
+	•	mvn clean install
+	•	docker build -t springboot-postgres-k8s:1.0 .
+	•	kubectl apply -f Postgres-credentials.yml
+	•	kubectl apply -f Postgres-configmap.yml
+	•	kubectl apply -f Postgres-deployment.yml
+	•	kubectl apply -f deployment.yml
+	•	kubectl exec -it {postgres pod name} bash
+	•	kubectl logs -f {pod name} : -f used for streaming logs
+	•
+	•	kubectl get pods/service/deployment/secret
+	•	Kubectl delete pods/service/deployment/secret {name}
+	•	minikube service springboot-postgres-k8s : after applying all run this cmd to open app in browser with ip
+	•	kubectl describe pod {pod name} : information about pod
+
+
+	•	kubectl delete service postgres
+	•	kubectl delete service springboot-postgres-k8s
+	•	kubectl delete deployment postgres
+	•	kubectl delete deployment springboot-postgres-k8s
+
+	•	kubectl cp hive-table-registration-activities-7bc8d4f6fd-xlwpz:/var/log/hive-table-registration-activities/hive-table-registration-activities.log.4 /Users/mayankjindal/hive.txt
+
+	•	jar -xf <jar name>: unzip jar inside the pod
+	•	printenv : run it inside a pod to get list of env variables
+
+Project specific
+
+	•	kubectx : returns list of clusters
+	•	kubectx {cluster name} : switch clusters
+	•	Kubens : list of all namespace in cluster
+	•	kubens hygiene-dev : change namespace to the one specified
+	•	kubectl get pods : get the pods
+	•	kubectl get po -n hygiene-dev : get pods of specified namespace even if it is not our active one
+	•	kubectl exec -it {pod name} bash : login to the particular pod
+	•	cd /var/log/{project name} : move to log folder
+	•	vi {log file name} :
+	•	kubectl config get-contexts : info about all clusters and current namespaces
+	•	kubectl get pods —context=prd-use1-eks-b —namespace=hygiene-prod
+	•	alias kubectl="/usr/local/bin/kubectl”
+	•	alias kubens="kubectl config set-context --namespace="
+
+
+
