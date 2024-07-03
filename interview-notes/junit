@@ -1,0 +1,40 @@
+JUnit Overview
+JUnit is a popular open-source framework for writing and running tests in Java. It is widely used for unit testing, which involves testing individual components or units of code in isolation to ensure they work correctly.
+
+Key Features of JUnit
+
+Annotations:
+    Simplifies the process of writing and managing tests.
+Assertions:
+    Provides methods to test expected results.
+Test Runners:
+    Execute tests and report results.
+Test Fixtures:
+    Set up the necessary environment before tests run and clean up afterward.
+Integration:
+    Works seamlessly with build tools like Maven, Gradle, and CI/CD pipelines.
+
+Common JUnit Annotations
+    @Test:
+        Marks a method as a test method.
+    @BeforeEach:
+        Specifies a method to be run before each test method. (JUnit 5)
+    @AfterEach:
+        Specifies a method to be run after each test method. (JUnit 5)
+    @BeforeAll:
+        Specifies a method to be run once before all test methods in the class. (JUnit 5)
+    @AfterAll:
+        Specifies a method to be run once after all test methods in the class. (JUnit 5)
+    @Disabled:
+        Disables a test method or class, preventing it from running. (JUnit 5)
+    @RepeatedTest:
+        Marks a method to be run multiple times. (JUnit 5)
+    @ParameterizedTest:
+        Marks a method as a parameterized test, allowing it to be run with different parameters. (JUnit 5)
+
+Mocking
+Mocking is the process of creating mock objects to simulate the behavior of real objects in controlled ways. This is particularly useful in unit testing to isolate the code being tested and avoid dependencies on other components or external systems.
+
+Mocking Frameworks
+Mockito: One of the most popular Java mocking frameworks.
+EasyMock: Another popular framework for creating mock objects.

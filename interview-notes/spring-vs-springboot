@@ -1,0 +1,46 @@
+Spring vs. Spring Boot
+Overview
+
+Spring Framework is a comprehensive framework for building Java applications. It provides infrastructure support for developing Java applications, enabling developers to focus on business logic rather than boilerplate code.
+
+Spring Boot is an extension of the Spring Framework that simplifies the setup and development of new Spring applications. It provides a convention-over-configuration approach, reducing the amount of boilerplate code and configuration required.
+
+Key Differences
+
+1. Setup and Configuration
+    Spring Framework: Requires extensive configuration, often involving XML and Java-based configuration files. Setting up a Spring application involves configuring beans, managing dependencies, and setting up the environment.
+    Spring Boot: Uses convention-over-configuration, offering a variety of starter projects to get up and running quickly. It auto-configures many aspects of the application based on the dependencies present in the classpath, minimizing manual setup.
+
+2. Embedded Server
+    Spring Framework: Requires an external server (e.g., Tomcat, Jetty) to run the application. You must deploy your application to the server manually.
+    Spring Boot: Comes with embedded servers like Tomcat, Jetty, or Undertow, allowing you to run applications as standalone Java applications. This simplifies development and deployment.
+
+3. Dependencies Management
+    Spring Framework: Developers manually manage dependencies and configurations for various Spring projects (e.g., Spring MVC, Spring Security).
+    Spring Boot: Provides starter dependencies (e.g., spring-boot-starter-web, spring-boot-starter-data-jpa) that bundle common dependencies for specific use cases, simplifying dependency management.
+
+4. Opinionated Defaults
+    Spring Framework: Requires explicit configuration for most components and services, giving developers complete control over the setup.
+    Spring Boot: Offers opinionated defaults and auto-configuration to streamline development. These defaults can be overridden if needed, but they provide a sensible starting point.
+
+5. Production-Ready Features
+    Spring Framework: Does not include production-ready features out-of-the-box.
+    Spring Boot: Includes production-ready features such as metrics, health checks, and externalized configuration support. The spring-boot-actuator module provides various endpoints to monitor and manage the application.
+
+6. Command-Line Interface (CLI)
+    Spring Framework: No CLI support for managing the application lifecycle.
+    Spring Boot: Offers a CLI tool that allows developers to quickly prototype and run Spring applications using Groovy scripts.
+
+Use Cases
+
+Spring Framework: Ideal for large, complex applications where fine-grained control over configuration is necessary. It is suitable for legacy projects or applications with specific, customized requirements.
+
+Spring Boot: Best for new projects and microservices where rapid development and minimal configuration are prioritized. It is also suitable for deploying standalone applications or creating RESTful services quickly.
+
+Conclusion
+
+Spring Framework provides comprehensive infrastructure support for developing Java applications, offering maximum flexibility and control. However, it requires more manual configuration and setup.
+
+Spring Boot builds on top of the Spring Framework, simplifying the development process with auto-configuration, embedded servers, and sensible defaults. It is designed to get applications up and running quickly with minimal effort.
+
+Choosing between Spring and Spring Boot depends on the project requirements. For new projects, microservices, or when rapid development is a priority, Spring Boot is usually the preferred choice. For existing projects or applications needing extensive customization and configuration, the Spring Framework may be more appropriate.

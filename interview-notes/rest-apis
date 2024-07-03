@@ -1,0 +1,59 @@
+REST APIs
+Overview
+
+REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on a stateless, client-server, cacheable communications protocol — the HTTP. RESTful applications use HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources, which can be any kind of data or functionality accessible via a URI (Uniform Resource Identifier).
+
+Principles of REST
+
+Stateless:
+    Each request from the client to the server must contain all the information needed to understand and process the request. The server does not store any state about the client session.
+Client-Server:
+    The client and server are independent of each other. The client sends requests, and the server processes and returns responses.
+Cacheable:
+    Responses must define themselves as cacheable or not to prevent clients from using stale or inappropriate data.
+Uniform Interface:
+    REST relies on a uniform interface to interact with resources. This simplifies and decouples the architecture, allowing each part to evolve independently.
+Layered System:
+    The client cannot ordinarily tell whether it is connected directly to the end server or to an intermediary along the way.
+Code on Demand (optional):
+    Servers can temporarily extend or customize the functionality of a client by transferring executable code.
+
+HTTP Methods
+
+GET: Retrieve data from the server.
+POST: Submit data to the server.
+PUT: Update data on the server.
+DELETE: Remove data from the server.
+PATCH: Apply partial modifications to a resource.
+
+REST vs. SOAP
+
+Protocol:
+    REST is an architectural style and can use various protocols (HTTP, HTTPS), while SOAP (Simple Object Access Protocol) is a protocol itself that operates mainly over HTTP and SMTP.
+Message Format:
+    REST typically uses JSON or XML for messaging, while SOAP strictly uses XML.
+Complexity:
+    REST is simpler and easier to use, with a more flexible data format. SOAP is more rigid, with a standard set of rules and specifications.
+Performance:
+    REST is generally faster and more efficient, mainly due to its stateless nature and lighter message format.
+Security:
+    SOAP has built-in standards for security (WS-Security), while REST can use HTTPS and other security measures but does not have built-in security specifications.
+
+Use Cases
+
+REST: Ideal for web services requiring lightweight communication, scalability, and flexibility. Commonly used in public APIs, mobile app backends, and microservices.
+SOAP: Suitable for enterprise-level services needing high security and transactional reliability, such as banking and financial services.
+
+Example of REST API
+
+Assume you have a REST API for managing a collection of books.
+
+GET /books: Retrieve a list of all books.
+GET /books/{id}: Retrieve a specific book by ID.
+POST /books: Create a new book.
+PUT /books/{id}: Update a specific book by ID.
+DELETE /books/{id}: Delete a specific book by ID.
+
+Conclusion
+
+REST APIs offer a flexible, lightweight way to interact with web services. They follow a set of principles designed to ensure stateless, cacheable, and scalable interactions. REST's simplicity and performance advantages make it a preferred choice for many modern web applications compared to the more complex and rigid SOAP protocol.
