@@ -9,3 +9,21 @@ spring boot
 
 system-design
 https://www.interviewbit.com/system-design-interview-questions/
+
+In Spring Framework, @Controller and @RestController are both used to define controller classes, but they serve different purposes:
+
+@Controller
+Purpose:
+    Used to define a standard web controller that handles requests and returns views (HTML pages).
+Response:
+    Typically returns a ModelAndView object or a view name. It often works with templates (like Thymeleaf, JSP).
+Usage:
+    Commonly used in applications that follow the MVC pattern where views are rendered on the server side.
+
+@RestController
+Purpose:
+    A specialized version of @Controller that is used for RESTful web services.
+Response:
+    Automatically serializes return objects to JSON or XML (using @ResponseBody behind the scenes). It does not return view names.
+Usage:
+    Ideal for APIs where the response is usually in JSON format and you want to expose data without rendering views.
