@@ -1,0 +1,121 @@
+JAVA 8
+
+1. Functional Interface
+    only 1 abstract method
+
+2. Functional Interfaces before Java8
+    Runnable (run method)
+    Callable (call method)
+    Comparator
+
+3. Functional Interface categories introduced in Java 8
+    Function -> R apply(T t)
+    Predicate -> boolean test(T t)
+    Consumer -> void accept(T t)
+    Supplier -> T get()
+
+4. Lambda Expression
+    concise way to represent method of functional interface using an expression
+    ex:
+	MyFunction test= (i) -> i+1;
+    test.run(10);
+
+5. Stream
+	sequence of objects which can be pipelined to produce desired result
+	its not a data structure but creates a stream from inputs like Collection(), array, I/O, etc
+
+	ex:
+	list.stream().filter(t->t+4).sorted()
+		.forEach(System.out::println);
+
+6. Method reference
+	short notation of lambda expression to call a method
+
+7. Stream Methods
+	filter
+	forEach
+	sorted
+	map
+	flatmap
+	reduce
+	count
+	collect
+
+8. Stream API
+	a. List<List<String>> maplist = users.stream().map(users::getEmail()).collect(Collectors.toList());
+	b. List<String> flatmaplist = users.stream().flatmap(u -> u.getEmail().stream()).collect(Collectors.toList());
+	c. employeeMap = employees.stream().collect(groupingBy(Employee::getDept()));
+	d. employeeMap = employees.stream().collect(groupingBy(
+		Employee.getDept(),
+		collectingAndThen(maxBy(comparator, Employee.get()))
+		));
+
+9. Other features of Java 8
+	Completable Future
+	Optional Class
+	default method
+	new Date and Time api
+		java.util.Date
+		java.util.Calendar
+
+10. Java Design Patterns
+		Creational pattern
+		Behavioral pattern
+		Structural pattern
+
+11. Why design patterns
+		tried and tested solution to common problems
+		language neutral
+		final product will have higher value of comprehension
+		easier to maintain later
+
+12. Creational design patterns
+		Factory method
+			we dont expose creation logic to client
+			refer created object using standard interface
+
+		Abstract Factory pattern
+			provides an interface for creating families of related objects
+			factory of factory pattern
+
+		Singleton design pattern
+			ensures only 1 instance of a class
+			provides global access point to it
+			do not need to instantiate object
+			ex:
+				private instance;
+				public getInstance(){ return instance; }
+
+		Prototype design pattern
+			creates new object by copying an existing object known as prototype
+			can be used if creating new object is costly
+			uses clone() method to clone the instance of prototype
+
+		Builder design pattern
+			constructing a complex object from simple objects using step-by-step approach
+			it separates construction of complex object from its representation so that same construction process can
+			create different representations
+			building multi-part object
+
+13. SOLID principles
+
+	a. Single responsibility principle
+		every java class must perform a single functionality
+		it helps keep code clean and not mashed up
+
+	b. Open-Closed principle
+		the module should be open for extension but closed for modification
+
+	c. Liskov Substitution principle
+		derived classes should be completely substitutable for their base classes
+		Class A is a subclass of Class B, then we should be able to replace B with A
+
+	d. Interface Segregation principle
+		larger interfaces should be split into smaller ones
+		implementation classes should use only the methods that are required
+		we should not force the client to use methods they do not require
+
+	e. Dependency Inversion principle
+		we must use abstraction(abstract class and interfaces) instead of concrete implementations
+		high level modules should not depend on low level modules but both should depend on the abstraction
+
